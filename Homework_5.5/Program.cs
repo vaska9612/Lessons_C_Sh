@@ -9,6 +9,7 @@ namespace Homework_5._5
     internal class Program
     {
         //Строчка
+        // Dnjhf zcnhjxrf +++
         static void Main(string[] args)
         {
             Console.WriteLine("Введите порядок N квадратной матрицы");
