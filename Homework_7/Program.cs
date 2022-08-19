@@ -41,6 +41,7 @@ namespace Homework_7
             double S = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
             Console.WriteLine(S);
             return S;
+            //нифига не работает!!!
         }
     }
 }
