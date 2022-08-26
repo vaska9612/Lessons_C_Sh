@@ -1,2 +1,0 @@
-Get .rvt from TSN
-Send .nwd files to FTP before 18 p.m.

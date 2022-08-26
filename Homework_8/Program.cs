@@ -14,12 +14,23 @@ namespace Homework_8
         static void Main(string[] args)
         {
             string path = "D:/vaska/Desktop/C#/HW_8";
-            string[] directory = Directory.GetFiles(path);
-            foreach (string file in directory)
+            string[] main_directory = Directory.GetDirectories(path);
+            string[] sub_directory;
+            int i = 0;
+            int j = 0;
+            foreach (string directory in main_directory)
             {
-                Console.WriteLine(file);
-                Directory.StreamReader 
-            }
+                i++;
+                j = 0;
+                Console.WriteLine();
+                Console.WriteLine("путь вложенной папки N{0}: {1}", i, directory);
+                sub_directory = Directory.GetFiles(directory);
+                foreach (string file in sub_directory)
+                {
+                    j++;
+                    Console.WriteLine("путь файла N{0} вложенной папки N{1}: {2}",j, i, file);
+                }
+            }            
             Console.ReadKey();
         }
     }
