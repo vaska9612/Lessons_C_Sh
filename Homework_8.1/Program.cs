@@ -30,14 +30,22 @@ namespace Homework_8._1
             {
                 string line;
                 int[] numbers_file = new int[10];
-                int i = 0;
-                while ((line = sr.ReadLine()) != null)
+                for (int i = 0; i < 10; i++)
+                {
+                    line = sr.ReadLine();
+                    int index = line.LastIndexOf(" ");
+                    line = line.Substring(index);
+                    numbers_file[i] = Convert.ToInt32(line);
+                }
+
+
+               /* while ((line = sr.ReadLine()) != null)
                 {
                     i++;
                     int index = line.LastIndexOf(" ");
                     line = line.Substring(index);
                     numbers_file[i] = Convert.ToInt32(line);
-                }
+                }*/
             }
             Console.WriteLine(sb);
             Console.ReadKey();            
