@@ -16,7 +16,7 @@ namespace Homework_8._2
             string file_path = "D:/vaska/Desktop/C#/HW_8.2/Text.txt";
             using (StreamReader reader = new StreamReader(file_path))
             {
-                string text = reader.ReadToEnd();
+                string text = reader.ReadToEnd().Replace("\r", "").Replace("\n", "");
                 int numb_symbol = text.Length;
                 Console.WriteLine(numb_symbol);
             }
@@ -41,7 +41,6 @@ namespace Homework_8._2
                     numb_words += words.Length;
                     text = reader.ReadLine();
                 }
-                numb_words = numb_words;
                 Console.WriteLine(numb_words);
             }
                 Console.ReadKey();
