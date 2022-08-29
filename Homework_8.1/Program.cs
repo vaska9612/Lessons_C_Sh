@@ -37,26 +37,15 @@ namespace Homework_8._1
                     line = line.Substring(index);
                     numbers_file[i] = Convert.ToInt32(line);
                 }
-
-
-               /* while ((line = sr.ReadLine()) != null)
+                int Sum = 0;
+                for (int i = 0; i < 10; i++)
                 {
-                    i++;
-                    int index = line.LastIndexOf(" ");
-                    line = line.Substring(index);
-                    numbers_file[i] = Convert.ToInt32(line);
-                }*/
-            }
-            Console.WriteLine(sb);
-            Console.ReadKey();            
-
-
+                    Sum += numbers_file[i];
+                }
+                Console.WriteLine("Сумма чисел в текстовом файле = {0}", Sum);
+            }          
+            Console.ReadKey(); 
         }
-        /*static int CulcSum(string file_path, out int Sum)
-        {
-
-        }*/
-
 
     }
 }
