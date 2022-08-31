@@ -51,27 +51,22 @@ namespace Homework_5._5
             Sum = 0;
             for (int i = 0; i < N; i++)
             {
-                int j = (N - 1 - i);
+                int j = (N - i - 1);
                 Sum += array[i, j];
             }
-            sum_array[x3] = Sum; 
+            sum_array[x3] = Sum;
+            bool flag = true;
             for (int x = 0; x < (2 * N + 1); x++)
             {
                 if (sum_array[x] != sum_array[x + 1])
                 {
-                    Console.WriteLine("Матрица не является магическим квадратом");
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Матрица является магическим квадратом");
-                    break;
+                    flag = false;
                 }
             }
-            /*foreach (int r in sum_array)
-            {
-                Console.Write("{0} ", r);
-            }*/
+            if (flag)
+                Console.WriteLine("Матрица является магическим квадратом");
+            else
+                Console.WriteLine("Матрица не является магическим квадратом");
             Console.ReadKey();
         }
     }
