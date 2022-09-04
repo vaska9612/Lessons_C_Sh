@@ -11,9 +11,9 @@ namespace Homework_9
         static void Main(string[] args)
         {
             Console.WriteLine("Введите целое число");
-            int a = Convert.ToInt16(Console.ReadLine());
+            double a = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Введите целое число");
-            int b = Convert.ToInt16(Console.ReadLine());
+            double b = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Что с ними сделать?");
             Console.WriteLine("1 - сложить\n2 - вычесть из первого второе\n3 - перемножить\n4 - поделить первое на второе");
             int to_do = 0;
@@ -38,9 +38,8 @@ namespace Homework_9
                             break;
                         }
                     case 4:
-                        {
-                            int c = a / b; // Если бы этой строчки не было, при попытке делить на 0 выводится не сообщение об ошибке, а "Результат: ?"                            
-                            Console.WriteLine("Результат: {0}", (double) a / b);
+                        {                            
+                            Console.WriteLine("Результат: {0}", a / b);
                             break;
                         }
                 }
