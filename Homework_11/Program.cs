@@ -23,13 +23,14 @@ namespace Homework_11
         }
         struct Equation
         {
-            public int k;
+            public int k;  //Нормально ли, что тут int, а в аргументах метода double. Если аргументы делать int, то в ответе х получается целым всегда
             public int b;
+            public void Root(double b, double k)
+            {
+                double x = -(b / k);
+                Console.WriteLine("х = {0}", x);
+            }
         }
-        public void Root(int b, int k)
-        {
-            float x = -b / k;
-            Console.WriteLine("х = {0}", x);
-        }
+
     }
 }
