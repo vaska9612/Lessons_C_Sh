@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,12 @@ namespace Homework_15
     {
         static void Main(string[] args)
         {
+            ArithProgression progr = new ArithProgression();
+            progr.setStart(10);
+            Console.WriteLine(progr.getNext());
+            Console.WriteLine(progr.getNext());
+            Console.ReadKey();
+            
         }
     }
     interface ISeries
@@ -24,20 +31,22 @@ namespace Homework_15
         public int X { get; set; }
         public int X1 { get; set; }
 
+
         public void setStart(int x)
         {
             X = x;
+            X1 = x;
         }
 
-        public int getNext(out X1)
+        public int getNext()
         {
             X1 = X1 + X;
-            retern X1;
+            return X1;
         }
 
         public void reset()
         {
-            throw new NotImplementedException();
+            X1 = X;
         }
 
     }
